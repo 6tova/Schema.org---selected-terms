@@ -1,0 +1,20 @@
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+schema:Taxon a rdfs:Class ;
+    rdfs:label "Taxon" ;
+    rdfs:comment "A set of organisms asserted to represent a natural cohesive biological unit." ;
+    rdfs:subClassOf schema:Thing ;
+    schema:isPartOf <https://pending.schema.org> ;
+    schema:source <http://bioschemas.org> .
+
+schema:taxonRank a rdf:Property ;
+    rdfs:label "taxonRank" ;
+    rdfs:comment "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary – typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs." ;
+    schema:domainIncludes schema:Taxon ;
+    schema:isPartOf <https://pending.schema.org> ;
+    schema:rangeIncludes schema:PropertyValue,
+        schema:Text,
+        schema:URL ;
+    schema:source <http://www.bioschemas.org/Taxon> .
